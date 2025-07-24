@@ -2,6 +2,14 @@ use clap::Parser;
 use serde_json::{Value, Map};
 use std::fs;
 
-pub fn main(){
-    print!("Hello, world!");
+
+struct Args
+{
+   input: String,
+   output: Option<String>,
+}
+
+
+fn main() {
+
 }
