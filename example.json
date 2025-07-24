@@ -1,12 +1,56 @@
 {
-  "name": "Malo",
-  "age": null,
-  "bio": "",
-  "address": {
-    "city": "Paris",
-    "zip": null,
-    "extra": {}
+  "user": {
+    "id": 12345,
+    "username": "anonymous_user",
+    "profile": {
+      "full_name": "Alex Devit",
+      "nickname": "Alex",
+      "bio": "Passionate developer and traveler.",
+      "website": "",
+      "social": {
+        "twitter": null,
+        "github": "alexdoe",
+        "linkedin": ""
+      }
+    },
+    "settings": {
+      "theme": "dark",
+      "notifications": {
+        "email": true,
+        "sms": false,
+        "push": null
+      },
+      "languages": ["en", "fr", "es"],
+      "privacy": {
+        "profile_visible": true,
+        "searchable": false,
+        "data_sharing": null
+      }
+    }
   },
-  "tags": [],
-  "projects": ["EcoWeave"]
+  "projects": [
+    {
+      "name": "EcoWeave",
+      "description": "A platform for sustainable textiles.",
+      "contributors": ["alexdoe", "jane_smith"],
+      "tags": ["sustainability", "textiles", "platform"],
+      "status": "active"
+    },
+    {
+      "name": "TravelBuddy",
+      "description": "App for finding travel partners.",
+      "contributors": [],
+      "tags": [],
+      "status": "archived"
+    }
+  ],
+  "activity": {
+    "last_login": "2025-07-25T10:30:00Z",
+    "recent_actions": [
+      {"type": "login", "timestamp": "2025-07-25T10:30:00Z"},
+      {"type": "update_profile", "timestamp": "2025-07-24T18:00:00Z"},
+      {"type": "create_project", "timestamp": "2025-07-20T14:15:00Z"}
+    ],
+    "notifications": []
+  }
 }
