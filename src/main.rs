@@ -6,11 +6,10 @@ use std::fs;
 #[derive(Parser, Debug)]
 #[command(author, version, about)]
 struct Args {
-    /// Input JSON file path
+    
     #[arg(short, long)]
     input: String,
 
-    /// Output file path (optional)
     #[arg(short, long)]
     output: Option<String>,
 }
@@ -41,6 +40,7 @@ pub fn clean_json(value: Value) -> Option<Value> {
         }
     }
 }
+
 fn main() {
     let args = Args::parse();
     let input_data = fs::read_to_string(&args.input)
