@@ -108,4 +108,4 @@ OPTIONS:
 
 ## 📜 License
 
-MIT © [Malo Winrhy](https://github.com/MaloWinrhy)
+This project is licensed under the [MIT License](LICENSE).
