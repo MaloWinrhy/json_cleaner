@@ -1,0 +1,12 @@
+{
+  "name": "Malo",
+  "age": null,
+  "bio": "",
+  "address": {
+    "city": "Paris",
+    "zip": null,
+    "extra": {}
+  },
+  "tags": [],
+  "projects": ["EcoWeave"]
+}
