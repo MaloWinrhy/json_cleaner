@@ -1,6 +1,6 @@
 [package]
 name = "json_cleaner"
-version = "0.1.0"
+version = "0.1.4"
 edition = "2021"
 authors = ["Malo Henry <ton.email@example.com>"]
 description = "A CLI tool to clean JSON files by removing null and empty values."
