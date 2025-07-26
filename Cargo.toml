@@ -2,15 +2,20 @@
 name = "json_cleaner"
 version = "0.1.0"
 edition = "2021"
-authors = ["Malo Winrhy <your_email@example.com>"]
-description = "A CLI tool to clean JSON files from null/empty values."
+authors = ["Malo Henry <ton.email@example.com>"]
+description = "A CLI tool to clean JSON files by removing null and empty values."
 license = "MIT"
 repository = "https://github.com/MaloWinrhy/json_cleaner"
+homepage = "https://github.com/MaloWinrhy/json_cleaner"
+documentation = "https://docs.rs/json_cleaner"
+readme = "README.md"
+keywords = ["json", "cli", "clean", "parser"]
+categories = ["command-line-utilities", "data-format"]
 
 [dependencies]
-serde = { version = "1", features = ["derive"] }
-serde_json = "1"
-clap = { version = "4", features = ["derive"] }
+clap = { version = "4.0", features = ["derive"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
 
 [dev-dependencies]
 assert_cmd = "2.0.17"
