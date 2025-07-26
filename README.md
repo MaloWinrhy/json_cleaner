@@ -1,5 +1,6 @@
-
 # 🧹 json_cleaner
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 **json_cleaner** is a simple and efficient CLI tool written in Rust that removes `null`, empty strings, empty arrays, and empty objects from JSON files.
 
@@ -9,17 +10,15 @@ Built for developers who need clean data to work with, without writing custom lo
 
 ## 🚀 Features
 
--  Remove `null`, `""`, `{}`, and `[]` recursively
--  Input/output from file paths
--  Pretty-printed output
--  Fast and minimal dependencies
--  Written entirely in Rust
+- ✅ Remove `null`, `""`, `{}`, and `[]` recursively  
+- 📂 Input/output from file paths  
+- 🎯 Pretty-printed output  
+- ⚡ Fast and minimal dependencies  
+- 🦀 Written entirely in Rust  
 
 ---
 
 ## 📦 Installation
-
-Clone the repository and build it with Cargo:
 
 ```bash
 git clone https://github.com/MaloWinrhy/json_cleaner.git
@@ -71,21 +70,27 @@ You’ll find the binary in `target/release/json_cleaner`.
 cargo run -- --input path/to/input.json
 ```
 
-Or specify output:
+With output:
 
 ```bash
-cargo run -- --input path/to/input.json --output cleaned.json
+cargo run -- --input input.json --output cleaned.json
 ```
 
-Alternatively, use the compiled binary:
+Or apply changes in place:
 
 ```bash
-./json_cleaner --input data.json --output cleaned.json
+cargo run -- --input input.json --in-place
+```
+
+Or with compiled binary:
+
+```bash
+./json_cleaner --input input.json --output cleaned.json
 ```
 
 ---
 
-## 🧰 Options
+## 📚 Options
 
 ```bash
 json_cleaner --help
@@ -93,15 +98,14 @@ json_cleaner --help
 
 ```
 USAGE:
-    json_cleaner [OPTIONS] <INPUT>
-
-ARGS:
-    <INPUT>    Path to the input JSON file
+    json_cleaner [OPTIONS] --input <INPUT>
 
 OPTIONS:
-    -o, --output <OUTPUT>    Path to output file (optional)
-    -h, --help               Print help information
-    -V, --version            Print version information
+    -i, --input <INPUT>        Path to input file
+    -o, --output <OUTPUT>      Path to output file (optional)
+    --in-place                 Overwrite input file directly
+    -h, --help                 Print help
+    -V, --version              Print version
 ```
 
 ---

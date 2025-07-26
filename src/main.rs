@@ -1,6 +1,5 @@
 use clap::Parser;
 use std::fs;
-use serde_json::Value;
 mod domain;
 mod usecase;
 mod infrastructure;
