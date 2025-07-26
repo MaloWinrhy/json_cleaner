@@ -1,38 +1,68 @@
-# 🧹 json_cleaner
+# json_cleaner
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**json_cleaner** is a simple and efficient CLI tool written in Rust that removes `null`, empty strings, empty arrays, and empty objects from JSON files.
+**json_cleaner** is a simple and efficient command-line tool written in Rust that removes `null`, empty strings (`""`), empty arrays (`[]`), and empty objects (`{}`) from JSON files.
 
-Built for developers who need clean data to work with, without writing custom logic every time.
-
----
-
-## 🚀 Features
-
-- ✅ Remove `null`, `""`, `{}`, and `[]` recursively  
-- 📂 Input/output from file paths  
-- 🎯 Pretty-printed output  
-- ⚡ Fast and minimal dependencies  
-- 🦀 Written entirely in Rust  
+This tool is built for developers who want to clean up noisy JSON data without writing custom scripts.
 
 ---
 
-## 📦 Installation
+## Features
+
+- Recursively removes:
+  - `null` values
+  - Empty strings
+  - Empty arrays
+  - Empty objects
+- Reads JSON from a file
+- Optionally writes output to a file or overwrites the input
+- Outputs formatted (pretty-printed) JSON
+- Lightweight and fast
+
+---
+
+## Installation
+
+Install directly from crates.io:
 
 ```bash
-git clone https://github.com/MaloWinrhy/json_cleaner.git
-cd json_cleaner
-cargo build --release
+cargo install json_cleaner
 ```
-
-You’ll find the binary in `target/release/json_cleaner`.
 
 ---
 
-## 🧪 Example
+## Usage
 
-### Input (`example.json`)
+Basic usage:
+
+```bash
+json_cleaner --input input.json
+```
+
+With output written to another file:
+
+```bash
+json_cleaner --input input.json --output cleaned.json
+```
+
+Overwrite the original file in place:
+
+```bash
+json_cleaner --input input.json --in-place
+```
+
+Display help:
+
+```bash
+json_cleaner --help
+```
+
+---
+
+## Example
+
+### Input (`example.json`):
 
 ```json
 {
@@ -49,7 +79,7 @@ You’ll find the binary in `target/release/json_cleaner`.
 }
 ```
 
-### Output
+### Output:
 
 ```json
 {
@@ -64,52 +94,6 @@ You’ll find the binary in `target/release/json_cleaner`.
 
 ---
 
-## 🛠️ Usage
-
-```bash
-cargo run -- --input path/to/input.json
-```
-
-With output:
-
-```bash
-cargo run -- --input input.json --output cleaned.json
-```
-
-Or apply changes in place:
-
-```bash
-cargo run -- --input input.json --in-place
-```
-
-Or with compiled binary:
-
-```bash
-./json_cleaner --input input.json --output cleaned.json
-```
-
----
-
-## 📚 Options
-
-```bash
-json_cleaner --help
-```
-
-```
-USAGE:
-    json_cleaner [OPTIONS] --input <INPUT>
-
-OPTIONS:
-    -i, --input <INPUT>        Path to input file
-    -o, --output <OUTPUT>      Path to output file (optional)
-    --in-place                 Overwrite input file directly
-    -h, --help                 Print help
-    -V, --version              Print version
-```
-
----
-
-## 📜 License
+## License
 
 This project is licensed under the [MIT License](LICENSE).
