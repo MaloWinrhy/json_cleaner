@@ -10,7 +10,7 @@ homepage = "https://github.com/MaloWinrhy/json_cleaner"
 documentation = "https://docs.rs/json_cleaner"
 readme = "README.md"
 keywords = ["json", "cli", "clean", "parser"]
-categories = ["command-line-utilities", "data-format"]
+categories = ["command-line-utilities", "parsing"]
 
 [dependencies]
 clap = { version = "4.0", features = ["derive"] }
